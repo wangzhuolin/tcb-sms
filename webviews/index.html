@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TCB-SMS | 腾讯云云开发短信发送</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" type="image/x-icon" href="asset/logo.png">
+    <link rel="mask-icon" href="asset/logo.png" color="#4C4C4C">
+    <link rel="apple-touch-icon-precomposed" href="asset/logo.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="color-scheme" content="light dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="由腾讯云云开发提供支持！高效稳定，更安全">
+    <meta name="author" content="腾讯云云开发">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/tcb-min.js"></script>
+    <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+</head>
+<body onselectstart ='return false'>
+    <div class="top-model">
+        <div class="top-title">TCB-SMS</div>
+        <div class="top-des font-web">腾讯云云开发</div>
+    </div>
+    <div class="main-model">
+        <span class="modal noShow" id="myModal">初始化未成功，请重新进入本页面！</span>
+        <div class="main-tool font-web" id="mainTool">
+            <div class="tool-item tool-item-select" id="toolItem-1">短信发送</div>
+        </div>
+        <div class="main-show block" id="itemView-1">
+            <div class="setView-main toFloat" id="setView-main-3">
+                <div class="setModel seizeTop">
+                    <div class="setItem">
+                        <div class="setName">手机号码</div>
+                        <input class="set-input" type="text" maxlength="11" onkeyup="this.value=this.value.replace(/\D/g,'')" id="phone">
+                    </div>
+                    <div class="setItem">
+                        <div class="setName">显示昵称</div>
+                        <input class="set-input" type="text" maxlength="20" id="name">
+                    </div>
+                    <div class="setItem">
+                        <div class="setName">选择模板</div>
+                        <select class="set-input" id="tplid">
+                            <option value ="638831">模板一</option>
+                            <option value ="638829">模板二</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="button dark large-btn upload" id="TencentCaptcha" data-appid="2037741197" data-cbfn="sendSms">
+                    <span class="btnText" id="sendBtnText">发送短信</span>
+                    <span class="btnProgress" id="sendProgress"></span>
+                </button>
+            </div>
+            <div class="setView-des" style="border-right: 1px solid #EEE;">
+                <div class="desItem">1.请正确输入用户手机号码，仅支持11位手机号。</div>
+                <div class="desItem">2.请提前到腾讯云短信平台申请模板和签名。</div>
+                <div class="desItem">3.本服务仅为测试使用，请勿用于非法用途。</div>
+                <div class="desItem">4.本工具由腾讯云云开发提供服务，安全稳定且弹性，详情请访问腾讯云官网。</div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">Copyright ©2020 云开发. All rights reserved. </div>
+    <script>
+        let modalFlag = false;
+        let viewFlag = 0;
+        let initFlag = false;
+        let fileSaver = null;
+        let uid = null;
+        let app = null;
+    </script>
+    <script src="js/util.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

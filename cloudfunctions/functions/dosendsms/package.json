@@ -1,0 +1,15 @@
+{
+  "name": "dosendsms",
+  "version": "1.0.0",
+  "description": "发送短信",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tcb-admin-node": "latest",
+    "tencentcloud-sdk-nodejs": "latest"
+  }
+}
